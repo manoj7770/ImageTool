@@ -40,9 +40,6 @@ const Size = ({ src, alt, draggable, onDragStart }) => {
 
   return (
     <div
-      // draggable={draggable}
-      // onDragStart={onDragStart}
-      // style={{ backgroundImage: `url(${src})` }}
       ref={boxRef}
       className="item"
     >

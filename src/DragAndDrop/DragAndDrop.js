@@ -44,6 +44,7 @@ const DragAndDrop = () => {
     let id = e.dataTransfer.getData("id");
     let currentData = draggable.find((item) => item.name == id);
     let newDropable = [...droppable].concat(currentData);
+    setDraggable(draggable.filter((item) => item.name != id));
     console.log(currentData, newDropable);
     setDroppable(newDropable);
   };
@@ -83,7 +84,7 @@ const DragAndDrop = () => {
               src={index.src}
               key={index.src}
               alt="Image"
-              // style={{ width: "100%", height: "100%" }}
+              style={{ width: "100%", height: "100%" }}
             />
           ))}
         </div>
